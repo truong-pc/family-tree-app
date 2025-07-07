@@ -51,4 +51,4 @@ Dự án này là một hệ thống quản lý cây gia phả dựa trên web. 
 - Frontend mặc định chạy tại: `http://localhost:3000/`
 
 ## Giấy Phép
-Dự án này dành cho mục đích giáo dục.
+Dự án này dành cho mục đích học tập cá nhân.
