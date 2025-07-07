@@ -38,7 +38,7 @@ export default function FamilyTreeChart({ data, onNodeClick, focusedPerson, getP
         const containerHeight = Math.max(600, window.innerHeight * 0.6) // At least 600px, or 60% of viewport height
 
         setDimensions({
-          width: Math.max(800, containerWidth - 40), // At least 800px, with some padding
+          width: Math.max(600, containerWidth - 40), // At least 400px, with some padding
           height: containerHeight,
         })
       }
@@ -83,10 +83,10 @@ export default function FamilyTreeChart({ data, onNodeClick, focusedPerson, getP
     const g = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`)
 
     // Node dimensions - responsive based on screen size
-    const nodeWidth = width < 1024 ? 100 : 120 // Smaller nodes on smaller screens
+    const nodeWidth = width < 1024 ? 120 : 120 // Smaller nodes on smaller screens
     const nodeHeight = width < 1024 ? 40 : 50
     const minNodeSpacing = width < 768 ? 15 : 20 // Tighter spacing on mobile
-    const levelHeight = width < 768 ? 80 : 120 // Less vertical space on mobile
+    const levelHeight = width < 768 ? 90 : 120 // Less vertical space on mobile
 
     // Create hierarchical structure
     const nodeMap = new Map()
@@ -258,7 +258,7 @@ export default function FamilyTreeChart({ data, onNodeClick, focusedPerson, getP
 
     // Add labels with responsive font size
     const fontSize = width < 768 ? "10px" : "12px"
-    const maxNameLength = width < 768 ? 10 : 15
+    const maxNameLength = width < 768 ? 15 : 15
 
     const labels = g
       .append("g")
